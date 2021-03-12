@@ -26,6 +26,8 @@ namespace LogiranjeApp.Controllers
                     obj.LogType = "Prijava";
 
                     DatabaseService.PostLogs(obj);
+
+                    return RedirectToAction("uspehPrijava");
                 }
                 else
                 {
@@ -34,35 +36,44 @@ namespace LogiranjeApp.Controllers
             }
             else
             {
-                return RedirectToAction("prijava");
+                return RedirectToAction("prijava", new { id });
             }
-
-
-
-
-            ViewBag.Id = cookie;
-
-            return View();
         }
 
-        public ActionResult Prijava()
+        public ActionResult Prijava(int id)
         {
             return View();
         }
 
         public ActionResult Odjava(int id)
         {
+            string cookie;
             if (Request.Cookies["UserId"] == null)
             {
-                return RedirectToAction("prijava");
+                return RedirectToAction("prijava", new { id });
+            }
+            else
+            {
+                cookie = Request.Cookies["UserId"].Value;
+                if (DatabaseService.GetLogLast(Int32.Parse(cookie), id).Count == 0 || DatabaseService.GetLogLast(Int32.Parse(cookie), id)[0].LogType != "Prijava")
+                {
+                    return RedirectToAction("dodaj", new { id });
+                }
             }
 
             return View();
         }
 
-        public ActionResult Uspeh()
+        public ActionResult UspehPrijava()
         {
             return View();
         }
+
+        public ActionResult UspehOdjava()
+        {
+            return View();
+        }
+
+
     }
 }

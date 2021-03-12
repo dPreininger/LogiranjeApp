@@ -20,8 +20,7 @@
         url: url,
         data: obj,
         success: function (data) {
-            alert("ok");
-            // TODO: redirect
+            window.location.href = '/logiranje/uspehOdjava'
         },
         error: function(err) {
             alert("Prislo je do napake, poskusite ponovno!");
@@ -56,11 +55,14 @@ $("#inputButton").click(function () {
             url: url,
             data: obj,
             success: function (data) {
-                var d = new Date();
+                let d = new Date();
                 d.setTime(d.getTime() + (3650 * 24 * 60 * 60 * 1000));
                 document.cookie = "UserId=" + data + "; expires=" + d + "; path=/";
-                window.location.href = '/'
-                
+
+                odmik = window.location.href.lastIndexOf("/") + 1;
+                let locationId = window.location.href.substring(odmik);
+
+                window.location.href = "/logiranje/dodaj/" + locationId;
             },
             error: function (err) {
                 alert("Prislo je do napake, poskusite ponovno!");
@@ -76,7 +78,7 @@ $("#odjavaMalica").click(function () {
 $("#odjavaKonec").click(function () {
     odjava("Odjava: Konec delovnega dneva");
 })
-$("#odjavaSluzba").click(function () {
+$("#odjavaSluzbeni").click(function () {
     odjava("Odjava: Sluzbeni odhod");
 })
 
