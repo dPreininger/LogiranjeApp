@@ -16,10 +16,10 @@ namespace LogiranjeApp.Controllers
             return DatabaseService.GetLogs();
         }
 
-        [Route("api/log/{usersId}/last")]
-        public List<Log> Get(int usersId)
+        [Route("api/log/last")]
+        public List<Log> Get([FromUri] int userId, [FromUri] int locationId)
         {
-            return DatabaseService.GetLogLast(usersId);
+            return DatabaseService.GetLogLast(userId, locationId);
         }
 
         public string Post([FromBody] LogNoId log)

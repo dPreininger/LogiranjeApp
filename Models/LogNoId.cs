@@ -5,6 +5,7 @@ using System.Web;
 
 namespace LogiranjeApp.Models
 {
+    //TODO: odstrani LogTime
     public class LogNoId
     {
         public int IdLocations { get; set; }

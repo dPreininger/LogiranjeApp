@@ -95,11 +95,11 @@ namespace LogiranjeApp.Control
             return Select<Location, dynamic>(query, new { id });
         }
 
-        public static List<Log> GetLogLast(int id)
+        public static List<Log> GetLogLast(int idUsers, int idLocations)
         {
-            string query = "SELECT * FROM logs WHERE idUsers = @id ORDER BY logTime DESC LIMIT 1;";
+            string query = "SELECT * FROM logs WHERE idUsers = @idUsers AND idLocations = @idLocations ORDER BY logTime DESC LIMIT 1;";
 
-            return Select<Log, dynamic>(query, new { id });
+            return Select<Log, dynamic>(query, new { idUsers, idLocations });
         }
 
         #endregion
@@ -130,7 +130,7 @@ namespace LogiranjeApp.Control
             string query = "INSERT INTO logs (idLocations, idUsers, logTime, logType)" +
                         "VALUES (@idLocations, @idUsers, @logTime, @logType)";
 
-            Exec<dynamic>(query, new { idLocations = log.IdLocations, idUsers = log.IdLocations, logTime = log.LogTime, logType = log.LogType });
+            Exec<dynamic>(query, new { idLocations = log.IdLocations, idUsers = log.IdUsers, logTime = DateTime.Now, LogType = log.LogType });
             return "Uspesno!";
         } 
 
