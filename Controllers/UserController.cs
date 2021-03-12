@@ -20,7 +20,13 @@ namespace LogiranjeApp.Controllers
         public int Post([FromBody] UserNoId user)
         {
             Random r = new Random();
-            int id = r.Next(100000, 999999);
+            int id;
+            while (true)
+            {
+                id = r.Next(100000, 999999);
+                if (DatabaseService.GetUsers(id).Count == 0) break;
+            }
+
             return DatabaseService.PostUser(user, id);
         }
     }
