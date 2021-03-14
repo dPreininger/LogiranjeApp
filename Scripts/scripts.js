@@ -66,10 +66,16 @@ $("#inputButton").click(function () {
                 d.setTime(d.getTime() + (3650 * 24 * 60 * 60 * 1000));
                 document.cookie = "UserId=" + data + "; expires=" + d + "; path=/";
 
-                odmik = window.location.href.lastIndexOf("/") + 1;
-                let locationId = window.location.href.substring(odmik);
+                let odmik = document.cookie.indexOf("LocationId") + 11;
+                // odmik je 10, ker zgornja funkcije vrne -1 in na koncu dodamo 11
+                if (odmik == 10) window.location.href = "/";
+                else {
+                    let locationId = document.cookie.substring(odmik);
+                    odmik = locationId.indexOf(";");
+                    if (odmik != -1) locationId = locationId.substring(0, odmik);
 
-                window.location.href = "/logiranje/dodaj/" + locationId;
+                    window.location.href = "/logiranje/dodaj/" + locationId;
+                }
             },
             error: function (err) {
                 alert("Prislo je do napake, poskusite ponovno!");
