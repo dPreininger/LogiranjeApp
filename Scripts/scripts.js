@@ -1,11 +1,18 @@
 ﻿function odjava(razlog) {
 
     let odmik = document.cookie.indexOf("UserId") + 7;
-
     let userId = document.cookie.substring(odmik);
+    odmik = userId.indexOf(";");
+    if(odmik != -1) userId = userId.substring(0, odmik);
 
-    odmik = window.location.href.lastIndexOf("/") + 1;
-    let locationId = window.location.href.substring(odmik);
+
+    odmik = document.cookie.indexOf("LocationId") + 11;
+    let locationId = document.cookie.substring(odmik);
+    odmik = locationId.indexOf(";");
+    if (odmik != -1) locationId = locationId.substring(0, odmik);
+
+    console.log(userId);
+    console.log(locationId);
 
     let obj = {
         "IdUsers": userId,
@@ -20,7 +27,7 @@
         url: url,
         data: obj,
         success: function (data) {
-            window.location.href = '/logiranje/uspehOdjava'
+            window.location.href = '/logiranje/uspeh'
         },
         error: function(err) {
             alert("Prislo je do napake, poskusite ponovno!");

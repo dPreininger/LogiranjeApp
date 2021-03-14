@@ -235,8 +235,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Logiranje\Prijava.cshtml" />
     <Content Include="Views\Logiranje\Dodaj.cshtml" />
-    <Content Include="Views\Logiranje\UspehPrijava.cshtml" />
-    <Content Include="Views\Logiranje\Odjava.cshtml" />
+    <Content Include="Views\Logiranje\Uspeh.cshtml" />
+    <Content Include="Views\Logiranje\Odhod.cshtml" />
     <Content Include="Views\Logiranje\UspehOdjava.cshtml" />
     <Content Include="Views\Home\Pridobi.cshtml" />
   </ItemGroup>
