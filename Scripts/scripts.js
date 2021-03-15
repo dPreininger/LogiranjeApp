@@ -20,7 +20,7 @@
         "LogType": razlog
     }
 
-    let url = "https://localhost:44344/api/log";
+    let url = "/api/log";
 
     $.ajax({
         type: "POST",
@@ -53,7 +53,7 @@ $("#inputButton").click(function () {
         }
 
 
-        let url = "https://localhost:44344/api/user/generate";
+        let url = "/api/user/generate";
 
         let id;
 

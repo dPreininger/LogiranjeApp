@@ -11,9 +11,7 @@ namespace LogiranjeApp.Controllers
     public class LogiranjeController : Controller
     {
         public ActionResult Dodaj(int id)
-        {
-            //Session["locationId"] = id;
-
+        { 
             string cookie;
             if (Request.Cookies["UserId"] != null)
             {
@@ -49,20 +47,21 @@ namespace LogiranjeApp.Controllers
 
         public ActionResult Prijava()
         {
-            //Int32 id = (Int32)Session["locationId"];
-
             return View();
         }
 
         public ActionResult Odhod()
         {
-            //Int32 id = (Int32)Session["locationId"];
-
             string cookieUserId;
             string cookieLocationId;
             if (Request.Cookies["UserId"] == null)
             {
                 return RedirectToAction("prijava");
+            }
+            if(Request.Cookies["LocationId"] == null)
+            {
+                // pohandlaj napako
+                return RedirectToAction("index", "home");
             }
             else
             {
@@ -85,21 +84,17 @@ namespace LogiranjeApp.Controllers
             Response.Cookies.Add(hc);
 
             string tip = (string)TempData["tip"];
+            if (tip == null) return RedirectToAction("index", "home");
+            
             ViewBag.Tip = tip;
+
+            // mogoce ni najboljse
+            User user = DatabaseService.GetUsers(Int32.Parse(Request.Cookies["UserId"].Value))[0];
+            ViewBag.Ime = user.Name;
+            ViewBag.Priimek = user.LastName;
+            ViewBag.Id = user.IdUsers;
 
             return View();
         }
-
-        //public ActionResult UspehPrijava()
-        //{
-        //    return View();
-        //}
-
-        //public ActionResult UspehOdjava()
-        //{
-        //    return View();
-        //}
-
-
     }
 }
