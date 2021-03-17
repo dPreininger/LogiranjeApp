@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace LogiranjeApp.Controllers
 {
-    public class HomeController : Controller
+    public class DomovController : Controller
     {
         public ActionResult Index()
         {

@@ -1,0 +1,115 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+    --bg-color: #EEE2DF;
+    --lighter-color: #EED7C5;
+    --main-color: #AF726E;
+    --dark-color: #C97C5D;
+    --darkest-color: #B36A5E;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav-bar {
+    background-color: white;
+    font-size: 1.2em;
+    padding: 0.7em;
+}
+
+    .nav-bar .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        place-content: space-between;
+    }
+
+    .nav-bar img {
+        height: 2.5em;
+        cursor: pointer;
+    }
+
+    .nav-bar .logo {
+        font-weight: bold;
+        color: black;
+        border-color: var(--dark-color);
+        border-style: solid;
+        border-radius: 5em;
+        padding: 0.3em;
+        border-width: 4px;
+    }
+
+        .nav-bar .logo span {
+            color: var(--dark-color);
+        }
+
+.hero {
+    padding: 1em;
+    text-align: center;
+}
+
+    .hero p {
+        color: var(--main-color);
+        font-size: 0.8em;
+    }
+
+.about {
+    background-color: var(--dark-color);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.uporaba {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+#user-info-signed {
+    background-color: white;
+    position: fixed;
+    z-index: 9999;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 250px;
+    right: 1em;
+    top: 4em;
+    height: 150px;
+}
+
+    #user-info-signed .container {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+        #user-info-signed .container label {
+            display: block;
+        }
+
+        #user-info-signed .container span {
+            display: block;
+        }
+
+        #user-info-signed .container a {
+            float: right;
+            margin-right: 6px;
+        }
+
+.hidden {
+    display: none;
+}
+/*# sourceMappingURL=style.css.map */

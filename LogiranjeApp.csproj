@@ -184,7 +184,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\LocationController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\DomovController.cs" />
     <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\LogiranjeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -204,14 +204,18 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\user-img.svg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="DbModel\model.mwb" />
+    <Content Include="Content\style.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\frontend.js" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -234,15 +238,15 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Domov\About.cshtml" />
+    <Content Include="Views\Domov\Contact.cshtml" />
+    <Content Include="Views\Domov\Index.cshtml" />
     <Content Include="Views\Logiranje\Prijava.cshtml" />
     <Content Include="Views\Logiranje\Dodaj.cshtml" />
     <Content Include="Views\Logiranje\Uspeh.cshtml" />
     <Content Include="Views\Logiranje\Odhod.cshtml" />
     <Content Include="Views\Logiranje\UspehOdjava.cshtml" />
-    <Content Include="Views\Home\Pridobi.cshtml" />
+    <Content Include="Views\Domov\Pridobi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
