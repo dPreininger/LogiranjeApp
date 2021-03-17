@@ -18,12 +18,12 @@ namespace LogiranjeApp.Controllers
                 cookie = Request.Cookies["UserId"].Value;
 
                 // Preverimo, ce se je osebek nazadnje prijavil
-                if (DatabaseService.GetLogLast(Int32.Parse(cookie), id).Count == 0 || DatabaseService.GetLogLast(Int32.Parse(cookie), id)[0].LogType != "Prijava")
+                if (DatabaseService.GetLogLast(Int32.Parse(cookie), id).Count == 0 || DatabaseService.GetLogLast(Int32.Parse(cookie), id)[0].IdLogType != 0)
                 {
                     LogNoId obj = new LogNoId();
                     obj.IdUsers = Int32.Parse(cookie);
                     obj.IdLocations = id;
-                    obj.LogType = "Prijava";
+                    obj.IdLogType = 0;
 
                     DatabaseService.PostLogs(obj);
 
@@ -67,7 +67,7 @@ namespace LogiranjeApp.Controllers
             {
                 cookieUserId = Request.Cookies["UserId"].Value;
                 cookieLocationId = Request.Cookies["LocationId"].Value;
-                if (DatabaseService.GetLogLast(Int32.Parse(cookieUserId), Int32.Parse(cookieLocationId)).Count == 0 || DatabaseService.GetLogLast(Int32.Parse(cookieUserId), Int32.Parse(cookieLocationId))[0].LogType != "Prijava")
+                if (DatabaseService.GetLogLast(Int32.Parse(cookieUserId), Int32.Parse(cookieLocationId)).Count == 0 || DatabaseService.GetLogLast(Int32.Parse(cookieUserId), Int32.Parse(cookieLocationId))[0].IdLogType != 0)
                 {
                     return RedirectToAction("dodaj", new { id = Int32.Parse(cookieLocationId) });
                 }

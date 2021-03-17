@@ -9,6 +9,6 @@ namespace LogiranjeApp.Models
     {
         public int IdLocations { get; set; }
         public int IdUsers { get; set; }
-        public string LogType { get; set; }
+        public int IdLogType { get; set; }
     }
 }

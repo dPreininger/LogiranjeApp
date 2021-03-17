@@ -14,7 +14,7 @@ namespace LogiranjeApp.Control
 {
     public class DatabaseService
     {
-        private static string _conString = "Server=127.0.0.1;Port=3306;Database=logiranje;Uid=root;Pwd=1234;";
+        private static readonly string _conString = "Server=127.0.0.1;Port=3306;Database=logiranje;Uid=root;Pwd=1234;";
 
         private static void Exec(string query)
         {
@@ -127,10 +127,10 @@ namespace LogiranjeApp.Control
 
         public static string PostLogs(LogNoId log)
         {
-            string query = "INSERT INTO logs (idLocations, idUsers, logTime, logType)" +
-                        "VALUES (@idLocations, @idUsers, @logTime, @logType)";
+            string query = "INSERT INTO logs (idLocations, idUsers, logTime, idLogType)" +
+                        "VALUES (@idLocations, @idUsers, @logTime, @idLogType)";
 
-            Exec<dynamic>(query, new { idLocations = log.IdLocations, idUsers = log.IdUsers, logTime = DateTime.Now, LogType = log.LogType });
+            Exec<dynamic>(query, new { idLocations = log.IdLocations, idUsers = log.IdUsers, logTime = DateTime.Now, idLogType = log.IdLogType });
             return "Uspesno!";
         } 
 

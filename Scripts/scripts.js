@@ -1,4 +1,4 @@
-﻿function odjava(razlog) {
+﻿function odjava(idRazlog) {
 
     let odmik = document.cookie.indexOf("UserId") + 7;
     let userId = document.cookie.substring(odmik);
@@ -17,7 +17,7 @@
     let obj = {
         "IdUsers": userId,
         "IdLocations": locationId,
-        "LogType": razlog
+        "IdLogType": idRazlog
     }
 
     let url = "/api/log";
@@ -86,12 +86,12 @@ $("#inputButton").click(function () {
 })
 
 $("#odjavaMalica").click(function () {
-    odjava("Odjava: Odhod na malico");
+    odjava(1);
 })
 $("#odjavaKonec").click(function () {
-    odjava("Odjava: Konec delovnega dneva");
+    odjava(3);
 })
 $("#odjavaSluzbeni").click(function () {
-    odjava("Odjava: Sluzbeni odhod");
+    odjava(2);
 })
 
