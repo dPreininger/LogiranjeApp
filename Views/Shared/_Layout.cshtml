@@ -9,29 +9,31 @@
     <link href="~/Content/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="nav-bar">
-        <div class="container">
-            <a href="/" class="logo">Log<span>App</span></a>
-            <img src="~/Images/user-img.svg" id="user-pic" class="no-close"/>
+    <div>
+        <div class="nav-bar">
+            <div class="container">
+                <a href="/" class="logo">Log<span>App</span></a>
+                <img src="~/Images/user-img.svg" id="user-pic" class="no-close" />
+            </div>
         </div>
-    </div>
-    <div id="user-info-signed" class="hidden no-close">
-        <div class="container no-close" >
-            <label for="menu-user" class="no-close">Uporabnik:</label>
-            <span id="menu-user" class="no-close">David Preininger</span>
-            <br />
-            <label for="menu-id" class="no-close">ID:</label>
-            <span id="menu-id" class="no-close">123456</span>
+        <div id="user-info-signed" class="hidden no-close">
+            <div class="container no-close">
+                <label for="menu-user" class="no-close">Uporabnik:</label>
+                <span id="menu-user" class="no-close">David Preininger</span>
+                <br />
+                <label for="menu-id" class="no-close">ID:</label>
+                <span id="menu-id" class="no-close">123456</span>
 
-            <a href="/logiranje/prijava" class="no-close">Spremeni</a>
+                <a href="/logiranje/prijava" class="no-close">Spremeni</a>
+            </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        @*<hr />*@
-        @*<footer>
-            <p>&copy; @DateTime.Now.Year - David Preininger</p>
-        </footer>*@
+        <div class="container body-content">
+            @RenderBody()
+            @*<hr />*@
+            @*<footer>
+                <p>&copy; @DateTime.Now.Year - David Preininger</p>
+            </footer>*@
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

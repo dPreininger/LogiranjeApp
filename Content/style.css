@@ -52,7 +52,9 @@ a {
         }
 
 .hero {
-    padding: 1em;
+    padding: 2em;
+    padding-top: 5em;
+    padding-bottom: 5em;
     text-align: center;
 }
 
@@ -63,19 +65,16 @@ a {
 
 .about {
     background-color: var(--dark-color);
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em;
     border-radius: 1em;
     margin: 1em;
 }
 
 .uporaba {
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 #user-info-signed {
@@ -111,5 +110,11 @@ a {
 
 .hidden {
     display: none;
+}
+
+.container {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */
