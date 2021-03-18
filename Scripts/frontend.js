@@ -31,8 +31,8 @@ $("#user-pic").click(function () {
             odmik = document.cookie.indexOf("UserName") + 9;
         }
         userName = document.cookie.substring(odmik);
-        odmik = userId.indexOf(";");
-        if (odmik != -1) userId = userName.substring(0, odmik);
+        odmik = userName.indexOf(";");
+        if (odmik != -1) userName = userName.substring(0, odmik);
 
         $('#menu-id').text(userId);
         $('#menu-user').text(userName);
