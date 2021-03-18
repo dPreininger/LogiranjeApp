@@ -61,7 +61,7 @@ namespace LogiranjeApp.Controllers
             if(Request.Cookies["LocationId"] == null)
             {
                 // pohandlaj napako
-                return RedirectToAction("index", "home");
+                return RedirectToAction("index", "domov");
             }
             else
             {
@@ -84,7 +84,7 @@ namespace LogiranjeApp.Controllers
             Response.Cookies.Add(hc);
 
             string tip = (string)TempData["tip"];
-            if (tip == null) return RedirectToAction("index", "home");
+            if (tip == null) return RedirectToAction("index", "domov");
             
             ViewBag.Tip = tip;
 

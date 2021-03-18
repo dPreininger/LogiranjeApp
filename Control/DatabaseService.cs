@@ -116,13 +116,18 @@ namespace LogiranjeApp.Control
         }
 
 
-        public static int PostUser(UserNoId user, int id)
+        public static User PostUser(UserNoId user, int id)
         {
             string query = "INSERT INTO users (idUsers, name, lastName)" +
                             "VALUES (@id, @name, @lastName)";
 
             Exec<dynamic>(query, new { id, name = user.Name, lastName = user.LastName });
-            return id;
+
+            User vrni = new User();
+            vrni.IdUsers = id;
+            vrni.Name = user.Name;
+            vrni.LastName = user.LastName;
+            return vrni;
         }
 
         public static string PostLogs(LogNoId log)

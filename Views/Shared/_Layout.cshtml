@@ -9,30 +9,39 @@
     <link href="~/Content/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
-        <div class="nav-bar">
-            <div class="container">
-                <a href="/" class="logo">Log<span>App</span></a>
-                <img src="~/Images/user-img.svg" id="user-pic" class="no-close" />
-            </div>
-        </div>
-        <div id="user-info-signed" class="hidden no-close">
-            <div class="container no-close">
-                <label for="menu-user" class="no-close">Uporabnik:</label>
-                <span id="menu-user" class="no-close">David Preininger</span>
-                <br />
-                <label for="menu-id" class="no-close">ID:</label>
-                <span id="menu-id" class="no-close">123456</span>
+    <div class="nav-bar">
+        <div class="nav-wrapper">
+            <a href="/" class="logo">Log<span>App</span></a>
+            <img src="~/Images/user-img.svg" class="no-close" id="user-pic" />
+            <div id="user-info-signed" class="user-info hidden no-close">
+                <div class="container no-close">
+                    <label for="menu-user" class="no-close">Uporabnik:</label>
+                    <span id="menu-user" class="no-close"></span>
+                    <br />
+                    <label for="menu-id" class="no-close">ID:</label>
+                    <span id="menu-id" class="no-close"></span>
 
-                <a href="/logiranje/prijava" class="no-close">Spremeni</a>
+                    <a class="user-info-spremeni no-close" href="/logiranje/prijava">Spremeni</a>
+                </div>
             </div>
+            <div id="user-info-unsigned" class="user-info hidden no-close">
+                <div class="container no-close">
+                    <span id="menu-user" class="no-close">Uporabnik ni prijavljen!</span>
+
+                    <a class="user-info-spremeni no-close" href="/logiranje/prijava">Prijava</a>
+                </div>
+            </div>
+            <div class="box-arrow arrow-left hidden" id="arrow-left"></div>
+            <div class="box-arrow arrow-right hidden" id="arrow-right"></div>
         </div>
-        <div class="container body-content">
+    </div>
+    <div>
+        <div class="wrapper">
             @RenderBody()
             @*<hr />*@
             @*<footer>
-                <p>&copy; @DateTime.Now.Year - David Preininger</p>
-            </footer>*@
+                    <p>&copy; @DateTime.Now.Year - David Preininger</p>
+                </footer>*@
         </div>
     </div>
 

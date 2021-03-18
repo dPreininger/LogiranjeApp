@@ -25,7 +25,7 @@ a {
     padding: 0.7em;
 }
 
-    .nav-bar .container {
+    .nav-bar .nav-wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -77,44 +77,79 @@ a {
     padding-bottom: 5em;
 }
 
-#user-info-signed {
+.user-info {
     background-color: white;
-    position: fixed;
+    position: absolute;
     z-index: 9999;
     border-color: black;
     border-width: 1px;
     border-style: solid;
     width: 250px;
-    right: 1em;
-    top: 4em;
+    right: -5px;
+    top: 57px;
     height: 150px;
+    border-radius: 1em;
 }
 
-    #user-info-signed .container {
+    .user-info .container {
         padding: 0.5em;
         font-size: 0.9em;
     }
 
-        #user-info-signed .container label {
+        .user-info .container label {
             display: block;
         }
 
-        #user-info-signed .container span {
+        .user-info .container span {
             display: block;
         }
 
-        #user-info-signed .container a {
-            float: right;
-            margin-right: 6px;
+        .user-info .container .user-info-spremeni {
+            position: absolute;
+            right: 1em;
+            bottom: 0.5em;
         }
 
 .hidden {
     display: none;
 }
 
-.container {
+.wrapper {
     max-width: 800px;
     display: block;
     margin: 0 auto;
+}
+
+.nav-wrapper {
+    position: relative;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+}
+
+.box-arrow {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: white;
+    border-top: black;
+    border-style: solid;
+    border-width: 1px;
+    top: 52px;
+    z-index: 10999;
+}
+
+.arrow-left {
+    -webkit-transform: skew(0, -45deg);
+    transform: skew(0, -45deg);
+    right: 22px;
+}
+
+.arrow-right {
+    -webkit-transform: skew(0, 45deg);
+    transform: skew(0, 45deg);
+    right: 11px;
 }
 /*# sourceMappingURL=style.css.map */

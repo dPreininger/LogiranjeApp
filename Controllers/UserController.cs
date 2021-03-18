@@ -17,7 +17,7 @@ namespace LogiranjeApp.Controllers
         }
 
         [Route("api/user/generate")]
-        public int Post([FromBody] UserNoId user)
+        public User Post([FromBody] UserNoId user)
         {
             Random r = new Random();
             int id;
@@ -28,6 +28,20 @@ namespace LogiranjeApp.Controllers
             }
 
             return DatabaseService.PostUser(user, id);
+        }
+
+        public User Get(int id)
+        {
+            List<User> user = DatabaseService.GetUsers(id);
+
+            if(user.Count == 0)
+            {
+                return null;
+            }
+            else
+            {
+                return user[0];
+            }
         }
     }
 }

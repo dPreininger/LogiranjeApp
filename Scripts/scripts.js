@@ -64,7 +64,8 @@ $("#inputButton").click(function () {
             success: function (data) {
                 let d = new Date();
                 d.setTime(d.getTime() + (3650 * 24 * 60 * 60 * 1000));
-                document.cookie = "UserId=" + data + "; expires=" + d + "; path=/";
+                document.cookie = "UserId=" + data["IdUsers"] + "; expires=" + d + "; path=/";
+                document.cookie = "UserName=" + data["Name"] + " " + data["LastName"] + "; expires=" + d + "; path=/";
 
                 let odmik = document.cookie.indexOf("LocationId") + 11;
                 // odmik je 10, ker zgornja funkcije vrne -1 in na koncu dodamo 11
