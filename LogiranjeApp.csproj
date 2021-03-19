@@ -231,13 +231,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Domov\About.cshtml" />
-    <Content Include="Views\Domov\Contact.cshtml" />
     <Content Include="Views\Domov\Index.cshtml" />
     <Content Include="Views\Logiranje\Prijava.cshtml" />
     <Content Include="Views\Logiranje\Uspeh.cshtml" />
     <Content Include="Views\Logiranje\Odhod.cshtml" />
-    <Content Include="Views\Domov\Pridobi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
