@@ -50,7 +50,7 @@ function getUserNameAndId(id) {
 
 
 
-function odjava(idRazlog) {
+function odhod(idRazlog) {
 
     let odmik = document.cookie.indexOf("UserId") + 7;
     let userId = document.cookie.substring(odmik);
@@ -140,13 +140,13 @@ $("#registracija-cta").click(function () {
 
 
 $("#odhod-konec").click(function () {
-    odjava(1);
+    odhod(1);
 })
 $("#odhod-malica").click(function () {
-    odjava(2);
+    odhod(2);
 })
 $("#odhod-sluzbeni").click(function () {
-    odjava(3);
+    odhod(3);
 })
 
 
