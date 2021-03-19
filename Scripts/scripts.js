@@ -86,13 +86,14 @@ $("#inputButton").click(function () {
     }
 })
 
-$("#odjavaMalica").click(function () {
+
+$("#odhod-konec").click(function () {
     odjava(1);
 })
-$("#odjavaKonec").click(function () {
-    odjava(3);
-})
-$("#odjavaSluzbeni").click(function () {
+$("#odhod-malica").click(function () {
     odjava(2);
+})
+$("#odhod-sluzbeni").click(function () {
+    odjava(3);
 })
 

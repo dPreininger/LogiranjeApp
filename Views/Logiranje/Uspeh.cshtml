@@ -3,13 +3,23 @@
     ViewBag.Title = "Uspeh";
 }
 
-<div>
-    <h2>Uspeh</h2>
-    <h4>Tip:</h4>
-    <p>@ViewBag.Tip</p>
-    <h4>Uporabnik:</h4>
-    <p>@ViewBag.Ime @ViewBag.Priimek</p>
-    <h4>Uporabniski ID:</h4>
-    <p>@ViewBag.Id</p>
+<div class="centered-content">
+    <h2>Uspešno logirano!</h2>
+    <hr />
+
+    <div class="content-box">
+        <label class="std-label-borderless" for="uspeh-tip">Tip:</label>
+        <div class="item-box">
+            <span class="std-span" id="uspeh-tip">@ViewBag.Tip</span>
+        </div>
+        <label class="std-label-borderless" for="uspeh-ime">Uporabnik:</label>
+        <div class="item-box">
+            <span class="std-span" id="uspeh-uporabnik">@ViewBag.Ime @ViewBag.Priimek</span>
+        </div>
+        <label class="std-label-borderless" for="uspeh-id">ID:</label>
+        <div class="item-box">
+            <span class="std-span" id="uspeh-id">@ViewBag.Id</span>
+        </div>
+    </div>
 </div>
 

@@ -5,7 +5,7 @@
     --lighter-color: #EED7C5;
     --main-color: #AF726E;
     --dark-color: #C97C5D;
-    --darkest-color: #B36A5E;
+    --darkest-color: #381D19;
 }
 
 body {
@@ -151,5 +151,74 @@ a {
     -webkit-transform: skew(0, 45deg);
     transform: skew(0, 45deg);
     right: 11px;
+}
+
+.centered-content {
+    text-align: center;
+}
+
+.std-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.7em;
+    border-radius: 5em;
+    border: 1px solid;
+    height: 3em;
+    width: 70%;
+    max-width: 300px;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: var(--main-color);
+    color: white;
+}
+
+hr {
+    margin-left: 1em;
+    margin-right: 1em;
+    border: 3px solid var(--dark-color);
+    border-radius: 5em;
+    margin-bottom: 4em;
+}
+
+.std-label {
+    margin: 0 auto;
+    display: block;
+    margin-top: 2.7em;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 5em;
+    background-color: var(--main-color);
+    width: 70%;
+    max-width: 300px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    color: white;
+}
+
+.content-box {
+    background-color: var(--main-color);
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 1em;
+    padding: 1em;
+    padding-top: 0;
+    width: 70%;
+}
+
+.item-box {
+    background-color: var(--lighter-color);
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+
+.std-label-borderless {
+    margin: 0 auto;
+    display: block;
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: var(--main-color);
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    color: white;
 }
 /*# sourceMappingURL=style.css.map */

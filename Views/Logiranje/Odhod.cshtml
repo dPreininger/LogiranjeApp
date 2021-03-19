@@ -1,13 +1,12 @@
 ﻿
 @{
-    ViewBag.Title = "Odjava";
+    ViewBag.Title = "Odhod";
 }
 
-<div>
-    <h2>Odjava</h2>
-
-    <h3>Izberite tip odjave</h3>
-    <button id="odjavaMalica">Odhod na malico</button>
-    <button id="odjavaSluzbeni">Sluzbeni odhod</button>
-    <button id="odjavaKonec">Konec delovnega dneva</button>
+<div class="centered-content">
+    <h2>Izberite tip odhoda</h2>
+    <hr />
+    <input type="button" value="Konec dela" class="std-button" id="odhod-konec" />
+    <input type="button" value="Odhod na malico" class="std-button" id="odhod-malica" />
+    <input type="button" value="Odhod na službeno obveznost" class="std-button" id="odhod-sluzbeni" />
 </div>

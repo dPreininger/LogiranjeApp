@@ -238,7 +238,6 @@
     <Content Include="Views\Logiranje\Dodaj.cshtml" />
     <Content Include="Views\Logiranje\Uspeh.cshtml" />
     <Content Include="Views\Logiranje\Odhod.cshtml" />
-    <Content Include="Views\Logiranje\UspehOdjava.cshtml" />
     <Content Include="Views\Domov\Pridobi.cshtml" />
   </ItemGroup>
   <ItemGroup>
