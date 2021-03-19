@@ -5,7 +5,7 @@
     --lighter-color: #EED7C5;
     --main-color: #AF726E;
     --dark-color: #C97C5D;
-    --darkest-color: #381D19;
+    --darkest-color: #542D27;
 }
 
 body {
@@ -193,6 +193,7 @@ hr {
     padding-top: 0.4em;
     padding-bottom: 0.4em;
     color: white;
+    text-align: center;
 }
 
 .content-box {
@@ -203,6 +204,11 @@ hr {
     padding: 1em;
     padding-top: 0;
     width: 70%;
+    margin-bottom: 4em;
+}
+
+.padded-top {
+    padding-top: 0.1em;
 }
 
 .item-box {
@@ -210,6 +216,11 @@ hr {
     border-radius: 1em;
     margin-bottom: 1em;
 }
+
+    .item-box p {
+        font-size: 0.9em;
+        padding: 0.7em;
+    }
 
 .std-label-borderless {
     margin: 0 auto;
@@ -221,4 +232,46 @@ hr {
     padding-bottom: 0.4em;
     color: white;
 }
+
+.box-input {
+    margin: 0 auto;
+    background-color: inherit;
+    border-radius: inherit;
+    width: 90%;
+    border: none;
+    text-align: center;
+    font-size: 0.95em;
+    outline: none;
+}
+
+.dark-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 2.7em;
+    border-radius: 5em;
+    border: 1px solid;
+    height: 3em;
+    width: 70%;
+    max-width: 300px;
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: var(--darkest-color);
+    border-color: var(--darkest-color);
+    color: white;
+}
+
+.hr-short {
+    margin: 0 auto;
+    margin-bottom: 4em;
+    width: 30px;
+}
+
+#odjava-cta-div {
+    margin: 0 auto;
+    margin-bottom: 4em;
+    max-width: 300px;
+    width: 70%;
+}
+
+
 /*# sourceMappingURL=style.css.map */
