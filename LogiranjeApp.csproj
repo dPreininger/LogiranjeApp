@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\BundleConfig2.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -187,6 +188,7 @@
     <Compile Include="Controllers\DomovController.cs" />
     <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\LogiranjeController.cs" />
+    <Compile Include="Controllers\NapakaController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Control\DatabaseService.cs" />
     <Compile Include="Global.asax.cs">
@@ -235,9 +237,12 @@
     <Content Include="Views\Logiranje\Prijava.cshtml" />
     <Content Include="Views\Logiranje\Uspeh.cshtml" />
     <Content Include="Views\Logiranje\Odhod.cshtml" />
+    <Content Include="Views\Napaka\NiNajdeno.cshtml" />
+    <Content Include="Views\Napaka\Streznik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
