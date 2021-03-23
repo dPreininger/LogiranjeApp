@@ -239,6 +239,8 @@
     <Content Include="Views\Logiranje\Odhod.cshtml" />
     <Content Include="Views\Napaka\NiNajdeno.cshtml" />
     <Content Include="Views\Napaka\Streznik.cshtml" />
+    <Content Include="Views\Napaka\Prosnja.cshtml" />
+    <Content Include="Views\Napaka\Napaka.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
